@@ -1,0 +1,303 @@
+:root {
+  --verde: #1f4a38;
+  --crema: #f5e8e0;
+  --durazno: #f7cda8;
+  --cafe: #603429;
+  --fuente-titulo: 'Chelsea Market', cursive;
+  --fuente-cuerpo: 'Sansation', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 720px) {
+  .main-area {
+    flex-direction: column;
+  }
+  .dock-panel {
+    width: auto;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--fuente-cuerpo);
+  color: var(--cafe);
+  background: var(--crema);
+}
+
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.menu-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: var(--verde);
+}
+
+.menu-spacer::before {
+  content: "hoja de calculo";
+  font-family: var(--fuente-titulo);
+  color: var(--crema);
+  font-size: 1.05rem;
+}
+
+.menu-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  font-family: var(--fuente-cuerpo);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  background: var(--crema);
+  color: var(--verde);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--durazno);
+  color: var(--cafe);
+}
+
+
+.formula-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 20px;
+  background: #fff;
+  border-bottom: 1px solid var(--durazno);
+}
+
+.name-box {
+  font-family: var(--fuente-cuerpo);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  background: var(--crema);
+  border-radius: 4px;
+}
+
+
+.main-area {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+.tool-strip {
+  width: 44px;
+  background: var(--durazno);
+}
+
+.sheet-viewport {
+  flex: 1;
+  overflow: auto;
+  background:
+    linear-gradient(var(--crema) 1px, transparent 1px),
+    linear-gradient(90deg, var(--crema) 1px, transparent 1px);
+  background-size: 90px 28px;
+  background-color: #fff;
+}
+
+.sheet-scroll {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+.dock-panel {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 14px;
+  background: var(--crema);
+  overflow-y: auto;
+}
+
+.dock {
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.dock-grow {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dock-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: var(--verde);
+  color: var(--crema);
+  font-family: var(--fuente-cuerpo);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.dock-add {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background: var(--durazno);
+  cursor: pointer;
+  position: relative;
+}
+
+.dock-add::before,
+.dock-add::after {
+  content: "";
+  position: absolute;
+  background: var(--cafe);
+}
+
+.dock-add::before {
+  left: 50%;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  transform: translateX(-50%);
+}
+
+.dock-add::after {
+  top: 50%;
+  left: 4px;
+  right: 4px;
+  height: 2px;
+  transform: translateY(-50%);
+}
+
+.dock-body {
+  padding: 12px;
+}
+
+.dock-grow .dock-body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+
+.fn-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.fn-chip,
+.op-chip {
+  font-family: var(--fuente-cuerpo);
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 6px 4px;
+  border: none;
+  border-radius: 4px;
+  background: var(--crema);
+  color: var(--cafe);
+  cursor: pointer;
+}
+
+.fn-chip:hover,
+.op-chip:hover {
+  background: var(--durazno);
+}
+
+.op-row {
+  display: flex;
+  gap: 6px;
+}
+
+.op-chip {
+  flex: 1;
+  background: var(--crema);
+}
+
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--verde);
+}
+
+.field-select {
+  font-family: var(--fuente-cuerpo);
+  padding: 6px 8px;
+  border: 1px solid var(--durazno);
+  border-radius: 4px;
+  background: #fff;
+}
+
+
+.sheet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sheet-row {
+  padding: 8px 10px;
+  border-radius: 4px;
+  background: var(--crema);
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.sheet-row:hover {
+  background: var(--durazno);
+}
+
+.sheet-row.is-active {
+  background: var(--verde);
+}
+
+.sheet-row.is-active .sheet-row-name {
+  color: var(--crema);
+}
+
+.sheet-row-name {
+  font-weight: 700;
+  color: var(--cafe);
+}
+
+
+.status-bar {
+  padding: 8px 20px;
+  background: var(--verde);
+}
+
+.status-bar::before {
+  content: "listo";
+  color: var(--crema);
+  font-size: 0.75rem;
+  font-family: var(--fuente-cuerpo);
+  font-weight: 700;
+}
+
