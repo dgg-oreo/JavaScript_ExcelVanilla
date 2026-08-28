@@ -1,8 +1,8 @@
 :root {
-  --verde: #1f4a38;
-  --crema: #f5e8e0;
-  --durazno: #f7cda8;
-  --cafe: #603429;
+  --marino: #10222c;
+  --azul: #1f5273;
+  --turquesa: #5f9598;
+  --claro: #f2f4f3;
   --fuente-titulo: 'Chelsea Market', cursive;
   --fuente-cuerpo: 'Sansation', sans-serif;
 }
@@ -24,8 +24,8 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: var(--fuente-cuerpo);
-  color: var(--cafe);
-  background: var(--crema);
+  color: var(--marino);
+  background: var(--claro);
 }
 
 
@@ -41,13 +41,13 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 12px 20px;
-  background: var(--verde);
+  background: var(--marino);
 }
 
 .menu-spacer::before {
   content: "hoja de calculo";
   font-family: var(--fuente-titulo);
-  color: var(--crema);
+  color: var(--claro);
   font-size: 1.05rem;
 }
 
@@ -63,14 +63,14 @@ body {
   padding: 8px 18px;
   border: none;
   border-radius: 6px;
-  background: var(--crema);
-  color: var(--verde);
+  background: var(--claro);
+  color: var(--marino);
   cursor: pointer;
 }
 
 .btn-primary {
-  background: var(--durazno);
-  color: var(--cafe);
+  background: var(--turquesa);
+  color: var(--marino);
 }
 
 
@@ -80,7 +80,7 @@ body {
   gap: 12px;
   padding: 8px 20px;
   background: #fff;
-  border-bottom: 1px solid var(--durazno);
+  border-bottom: 1px solid var(--turquesa);
 }
 
 .name-box {
@@ -88,7 +88,7 @@ body {
   font-weight: 700;
   font-size: 0.85rem;
   padding: 4px 12px;
-  background: var(--crema);
+  background: var(--claro);
   border-radius: 4px;
 }
 
@@ -101,15 +101,15 @@ body {
 
 .tool-strip {
   width: 44px;
-  background: var(--durazno);
+  background: var(--turquesa);
 }
 
 .sheet-viewport {
   flex: 1;
   overflow: auto;
   background:
-    linear-gradient(var(--crema) 1px, transparent 1px),
-    linear-gradient(90deg, var(--crema) 1px, transparent 1px);
+    linear-gradient(var(--claro) 1px, transparent 1px),
+    linear-gradient(90deg, var(--claro) 1px, transparent 1px);
   background-size: 90px 28px;
   background-color: #fff;
 }
@@ -126,7 +126,7 @@ body {
   flex-direction: column;
   gap: 14px;
   padding: 14px;
-  background: var(--crema);
+  background: var(--claro);
   overflow-y: auto;
 }
 
@@ -147,8 +147,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 8px 12px;
-  background: var(--verde);
-  color: var(--crema);
+  background: var(--azul);
+  color: var(--claro);
   font-family: var(--fuente-cuerpo);
   font-weight: 700;
   font-size: 0.8rem;
@@ -159,7 +159,7 @@ body {
   height: 20px;
   border: none;
   border-radius: 50%;
-  background: var(--durazno);
+  background: var(--turquesa);
   cursor: pointer;
   position: relative;
 }
@@ -168,7 +168,7 @@ body {
 .dock-add::after {
   content: "";
   position: absolute;
-  background: var(--cafe);
+  background: var(--marino);
 }
 
 .dock-add::before {
@@ -212,14 +212,15 @@ body {
   padding: 6px 4px;
   border: none;
   border-radius: 4px;
-  background: var(--crema);
-  color: var(--cafe);
+  background: var(--claro);
+  color: var(--marino);
   cursor: pointer;
 }
 
 .fn-chip:hover,
 .op-chip:hover {
-  background: var(--durazno);
+  background: var(--turquesa);
+  color: #fff;
 }
 
 .op-row {
@@ -229,7 +230,7 @@ body {
 
 .op-chip {
   flex: 1;
-  background: var(--crema);
+  background: var(--claro);
 }
 
 
@@ -244,13 +245,13 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--verde);
+  color: var(--azul);
 }
 
 .field-select {
   font-family: var(--fuente-cuerpo);
   padding: 6px 8px;
-  border: 1px solid var(--durazno);
+  border: 1px solid var(--turquesa);
   border-radius: 4px;
   background: #fff;
 }
@@ -265,39 +266,38 @@ body {
 .sheet-row {
   padding: 8px 10px;
   border-radius: 4px;
-  background: var(--crema);
+  background: var(--claro);
   cursor: pointer;
   font-size: 0.85rem;
 }
 
 .sheet-row:hover {
-  background: var(--durazno);
+  background: var(--turquesa);
+  color: #fff;
 }
 
 .sheet-row.is-active {
-  background: var(--verde);
+  background: var(--azul);
 }
 
 .sheet-row.is-active .sheet-row-name {
-  color: var(--crema);
+  color: var(--claro);
 }
 
 .sheet-row-name {
   font-weight: 700;
-  color: var(--cafe);
+  color: var(--marino);
 }
 
 
 .status-bar {
   padding: 8px 20px;
-  background: var(--verde);
+  background: var(--marino);
 }
 
 .status-bar::before {
-  content: "listo";
-  color: var(--crema);
+  color: var(--claro);
   font-size: 0.75rem;
   font-family: var(--fuente-cuerpo);
   font-weight: 700;
 }
-
