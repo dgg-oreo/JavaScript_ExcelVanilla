@@ -1,5 +1,5 @@
 
-const FILAS = 20;     
+const FILAS = 26;     
 const COLUMNAS = 20;   
 
 
