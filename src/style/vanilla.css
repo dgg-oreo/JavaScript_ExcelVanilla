@@ -297,3 +297,57 @@ body {
   font-family: var(--fuente-cuerpo);
   font-weight: 700;
 }
+
+
+// Celdas y cuadricula 
+
+.hoja-tabla {
+  border-collapse: collapse;
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.85rem;
+}
+ 
+.hoja-tabla th,
+.hoja-tabla td {
+  border: 1px solid var(--turquesa);
+  min-width: 90px;
+  height: 28px;
+  padding: 0 6px;
+  text-align: left;
+}
+ 
+.hoja-tabla th {
+  background: var(--azul);
+  color: var(--claro);
+  text-align: center;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+ 
+.hoja-tabla th:first-child {
+  left: 0;
+  z-index: 2;
+}
+ 
+.hoja-tabla td {
+  background: #fff;
+  cursor: cell;
+}
+ 
+.hoja-tabla td.celda-activa {
+  outline: 2px solid var(--azul);
+  outline-offset: -2px;
+  background: var(--claro);
+}
+ 
+.celda-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.85rem;
+  background: transparent;
+}
