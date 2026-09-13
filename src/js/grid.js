@@ -55,3 +55,36 @@ function seleccionarCelda(nombreCelda) {
   document.querySelector(".name-box").textContent = nombreCelda;
 }
 
+function activarEdicion(nombreCelda) {
+  const celdaHTML = document.querySelector(`[data-celda="${nombreCelda}"]`);
+  if (!celdaHTML) return;
+ 
+  const valorActual = obtenerValorCelda(nombreCelda);
+ 
+  const input = document.createElement("input");
+  input.type = "text";
+  input.value = valorActual;
+  input.classList.add("celda-input");
+ 
+  celdaHTML.textContent = "";
+  celdaHTML.appendChild(input);
+  input.focus();
+  input.select();
+ 
+  function confirmarEdicion() {
+    guardarValorCelda(nombreCelda, input.value);
+    celdaHTML.textContent = obtenerValorCelda(nombreCelda);
+  }
+ 
+  input.addEventListener("blur", confirmarEdicion);
+ 
+  input.addEventListener("keydown", (evento) => {
+    if (evento.key === "Enter") {
+      input.blur(); 
+    }
+    if (evento.key === "Escape") {
+      celdaHTML.textContent = valorActual; 
+    }
+  });
+}
+ 
