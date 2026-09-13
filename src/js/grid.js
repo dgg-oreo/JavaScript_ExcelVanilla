@@ -42,3 +42,16 @@ function dibujarCuadricula() {
 
   contenedor.appendChild(tabla);
 }
+
+function seleccionarCelda(nombreCelda) {
+  const anterior = document.querySelector(".hoja-tabla td.celda-activa");
+  if (anterior) anterior.classList.remove("celda-activa");
+ 
+  celdaSeleccionada = nombreCelda;
+ 
+  const actual = document.querySelector(`[data-celda="${nombreCelda}"]`);
+  if (actual) actual.classList.add("celda-activa");
+ 
+  document.querySelector(".name-box").textContent = nombreCelda;
+}
+
