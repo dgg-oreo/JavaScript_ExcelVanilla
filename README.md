@@ -1,3 +1,8 @@
+Estructura de datos
+
+<img width="859" height="765" alt="image" src="https://github.com/user-attachments/assets/ebfd1ca4-a3ae-4692-a4fd-081985c5a00f" />
+
+
 Función para inicializar la celda
 
 <img width="1449" height="677" alt="image" src="https://github.com/user-attachments/assets/f05dd793-d4a3-4714-8db0-34753e1b0187" />
